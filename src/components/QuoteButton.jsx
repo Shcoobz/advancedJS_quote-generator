@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function QuoteButtons({ handleNewQuote, handleTweetQuote }) {
   return (
     <div className='button-container'>
@@ -14,5 +16,10 @@ function QuoteButtons({ handleNewQuote, handleTweetQuote }) {
     </div>
   );
 }
+
+QuoteButtons.propTypes = {
+  handleNewQuote: PropTypes.func.isRequired,
+  handleTweetQuote: PropTypes.func.isRequired,
+};
 
 export default QuoteButtons;

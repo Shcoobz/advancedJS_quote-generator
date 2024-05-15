@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import PropTypes from 'prop-types';
 
 function Quote({ quote, author }) {
   const quoteTextRef = useRef(null);
@@ -30,5 +31,10 @@ function Quote({ quote, author }) {
     </>
   );
 }
+
+Quote.propTypes = {
+  quote: PropTypes.string.isRequired,
+  author: PropTypes.string,
+};
 
 export default Quote;
