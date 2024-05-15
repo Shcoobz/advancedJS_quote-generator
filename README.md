@@ -40,3 +40,5 @@ Implements robust error handling by fetching quotes from a local source if the A
 ---
 
 _Note: This document provides an overview of react_Quote Generator. For detailed instructions and more information, please refer to the source code documentation._
+
+_This project is a conversion from an earlier version built with vanilla JavaScript and HTML, available [here](https://github.com/Shcoobz/basicJS_quote-generator/). This conversion integrates React to enhance UI reactivity and maintainability._
