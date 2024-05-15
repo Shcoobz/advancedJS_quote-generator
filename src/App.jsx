@@ -12,50 +12,46 @@ function App() {
   const [author, setAuthor] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
+  useEffect(function () {
     fetchQuotes();
   }, []);
 
-  const fetchQuotes = async () => {
-    try {
-      const response = await fetch(apiUrl);
-      apiQuotes = await response.json();
-      showNewQuote();
-    } catch (error) {
-      getLocalQuoteIfApiError();
-    }
-  };
+  function fetchQuotes() {
+    return (async function () {
+      try {
+        const response = await fetch(apiUrl);
+        apiQuotes = await response.json();
+        showNewQuote();
+      } catch (error) {
+        getLocalQuoteIfApiError();
+      }
+    })();
+  }
 
-  const getLocalQuoteIfApiError = () => {
+  function getLocalQuoteIfApiError() {
     apiQuotes = localQuotes;
     showNewQuote();
-  };
+  }
 
-  const showNewQuote = () => {
+  function showNewQuote() {
     const randomQuote = getRandomQuote();
     setAuthor(handleAuthor(randomQuote));
-    handleQuoteLength(randomQuote);
     setQuote(randomQuote.text);
     setIsLoading(false);
-  };
+  }
 
-  const getRandomQuote = () => {
+  function getRandomQuote() {
     return apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-  };
+  }
 
-  const handleAuthor = (randomQuote) => {
+  function handleAuthor(randomQuote) {
     return randomQuote.author || 'Unknown';
-  };
+  }
 
-  const handleQuoteLength = (randomQuote) => {
-    const quoteText = document.getElementById('quote');
-    quoteText.classList[randomQuote.text.length > 120 ? 'add' : 'remove']('long-quote');
-  };
-
-  const handleTweetQuote = () => {
+  function handleTweetQuote() {
     const twitterUrl = `https://twitter.com/intent/tweet?text=${quote} - ${author}`;
     window.open(twitterUrl, '_blank');
-  };
+  }
 
   return (
     <div className='quote-container' id='quote-container'>
