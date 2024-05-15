@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+
 import Loader from './components/Loader';
 import Quote from './components/Quote';
 import QuoteButtons from './components/QuoteButton';
+
 import localQuotes from './data/quotes';
 
 const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
