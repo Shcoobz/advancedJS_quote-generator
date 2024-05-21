@@ -1,10 +1,10 @@
-# react_Quote Generator: [LIVE DEMO](https://shcoobz.github.io/react_quote-generator/)
+# advancedJS_Quote Generator: [LIVE DEMO](https://shcoobz.github.io/advancedJS_quote-generator/)
 
-![react_Quote Generator](public/img/react_quote-generator.png)
+![advancedJS_Quote Generator](public/img/advancedJS_quote-generator.png)
 
 ## Summary
 
-react_Quote Generator provides an engaging user experience by displaying inspirational quotes from various authors. It features a clean, user-friendly interface with easy-to-use controls for fetching new quotes and sharing them on Twitter.
+advancedJS_Quote Generator provides an engaging user experience by displaying inspirational quotes from various authors. It features a clean, user-friendly interface with easy-to-use controls for fetching new quotes and sharing them on Twitter.
 
 The core functionality includes:
 
@@ -39,6 +39,6 @@ Implements robust error handling by fetching quotes from a local source if the A
 
 ---
 
-_Note: This document provides an overview of react_Quote Generator. For detailed instructions and more information, please refer to the source code documentation._
+_Note: This document provides an overview of advancedJS_Quote Generator. For detailed instructions and more information, please refer to the source code documentation._
 
 _This project is a conversion from an earlier version built with vanilla JavaScript and HTML, available [here](https://github.com/Shcoobz/basicJS_quote-generator/). This conversion integrates React to enhance UI reactivity and maintainability._
